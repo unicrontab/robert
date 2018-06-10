@@ -1,0 +1,2 @@
+
+global.totalPoints = 10;

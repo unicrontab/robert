@@ -6,6 +6,7 @@ var move = keyRight - keyLeft;
 
 xspeed = move * movespeed;
 yspeed += grav;
+if (yspeed > maxYSpeed) yspeed = maxYSpeed;
 
 
 if ((place_meeting(x, y + 4, oWall)) || (place_meeting(x, y + 4, oWallSolid))) && keyUp {
@@ -21,6 +22,7 @@ if (place_meeting(x + xspeed, y, oWall) || (place_meeting(x + xspeed, y, oWallSo
 x += xspeed;
 
 if (place_meeting(x, y + yspeed, oWall) || place_meeting(x, y + yspeed, oWallSolid)) {
+	screenShake(yspeed / 4, yspeed / 4);
 	while (!place_meeting(x, y + sign(yspeed), oWall) && !place_meeting(x, y + sign(yspeed), oWallSolid)) {
 		y += sign(yspeed);	
 	}
@@ -51,11 +53,13 @@ if (sign(yspeed) < 0) {
 	image_speed = 1;
 	image_xscale = sign(xspeed);
 	repeat(2) {
-		with (instance_create_layer(x, y + 13, "Particles", oSmoke)){
+		with (instance_create_layer(x + random_range(-2,2), y + 13, "Particles", oSmoke)){
+			image_alpha	= 0.4;
+			speed = random_range(1, 2);
 			if (sign(xspeed) > 0) {
 				direction = 45;
 			} else {
-				direction = 180;	
+				direction = 135;
 			}
 		}
 	}

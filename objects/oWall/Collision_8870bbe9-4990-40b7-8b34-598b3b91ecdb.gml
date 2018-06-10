@@ -27,6 +27,8 @@ if (dirToBullet > 315 || dirToBullet <= 45) {
 	if (!place_meeting(x, y - gridSize, oPlayer)) instance_create_layer(x, y - gridSize, "Instances", oWall);
 }
 
+screenShake(1,3);
+
 	
 
 

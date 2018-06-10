@@ -5,12 +5,15 @@ var currentIndex = 0;
 
 repeat(oPlayer.points) {
 	//draw_sprite(oTokenDisplay, -1, camera_get_view_x(view_camera[view_current]) + 20 + (currentIndex * 24), camera_get_view_y(view_camera[view_current]));
-	draw_sprite_ext(sToken, image_index, 40 + (currentIndex * 30), 40, 2, 2, image_angle, image_blend, image_alpha);
+	draw_sprite_ext(sToken, -1, 40 + (currentIndex * 30), 40, 2, 2, image_angle, image_blend, image_alpha);
 	currentIndex += 1;
 }
 
 repeat(pointDelta) {
-	draw_sprite_ext(sTokenBlank, image_index, 40 + (currentIndex * 30), 40, 2, 2, image_angle, image_blend, image_alpha);
+	draw_sprite_ext(sTokenBlank, -1, 40 + (currentIndex * 30), 40, 2, 2, image_angle, image_blend, image_alpha);
 	currentIndex += 1;
 }
+
+draw_set_halign(fa_right);
+draw_text_transformed(camera_get_view_width(view_current) - 40, 40, string(global.time/room_speed), 0.5, 0.5, image_angle);
 lastPoints = oPlayer.points;

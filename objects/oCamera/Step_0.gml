@@ -1,21 +1,23 @@
-x += (xTo - x)/25;
-y += (yTo - y)/25;
-/*
-var mouseDir = point_direction(x, y, mouse_x, mouse_y);
-var mouseDistance = point_distance(x, y, mouse_x, mouse_y);
-var lookahead = 0.2;
 
-var mouseAheadX = lengthdir_x(mouseDistance * lookahead, mouseDir);
-var mouseAheadY = lengthdir_y(mouseDistance * lookahead, mouseDir);
-*/
+var yOffset = (camera_get_view_height(view_camera[0]) / -4);
+
 if (follow != noone) {
 	xTo = follow.x;// + mouseAheadX;
-	yTo = follow.y;// + mouseAheadY;
+	yTo = follow.y + yOffset;// + mouseAheadY;
 }
-/*
-show_debug_message("mouseAheadX");
-show_debug_message(string(mouseAheadX));
-*/
+
+// Update camera pos
+x += (xTo - x) / 25;
+y += (yTo - y) / 25;
+
+
+// Shakes
+if (shakeLength != 0) {
+	x += random_range(-shakeRemaining, shakeRemaining);
+	y += random_range(-shakeRemaining, shakeRemaining);
+	shakeRemaining = max(0, shakeRemaining - ((1/shakeLength) * shakeIntensity));	
+}
+
 
 
 var viewMatrix = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
