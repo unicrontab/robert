@@ -1,1 +1,1 @@
-global.textScale = 0.3;
+global.textScale = 0.5;
