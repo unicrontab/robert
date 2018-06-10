@@ -39,6 +39,22 @@
             }
         },
         {
+            "Key": "048dd146-7012-4cf9-b4b2-8a1533fbf75b",
+            "Value": {
+                "id": "04bfe255-977b-40f1-a102-16475cc9f877",
+                "resourcePath": "sprites\\sCursor\\sCursor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "05f1e615-7cbe-4adc-9300-ee47c0b10906",
+            "Value": {
+                "id": "7c46b686-655f-460e-a5b1-c0452c41a7e2",
+                "resourcePath": "sprites\\sprite24\\sprite24.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09e49e51-4e58-491f-8b78-897d9188482d",
             "Value": {
                 "id": "e5c47870-9541-44af-8e43-b5587f67af6b",
@@ -691,6 +707,14 @@
             "Value": {
                 "id": "94b484a8-4e9f-4f3d-922e-8b6c37f5c291",
                 "resourcePath": "objects\\oToken\\oToken.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e9a4e93e-7f07-4dbf-bee1-2c5a7446cc36",
+            "Value": {
+                "id": "5b1c98eb-c69a-4705-8a30-217a4c877006",
+                "resourcePath": "objects\\oTweet\\oTweet.yy",
                 "resourceType": "GMObject"
             }
         },
