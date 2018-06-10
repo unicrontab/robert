@@ -1,5 +1,5 @@
 draw_set_halign(fa_center);
-draw_set_color($68F5FF);
+draw_set_color($9D98F6);
 draw_set_font(base);
 
 var scale = global.textScale;
