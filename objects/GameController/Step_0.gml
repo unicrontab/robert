@@ -3,6 +3,7 @@ if (oPlayer.points == global.totalPoints && complete != true) {
 	complete = true;
 	alarm[0] = 50;
 	if (global.scores[room] == 0 || global.time < global.scores[room]) global.scores[room] = global.time;
+
 }
 
 if (!complete) {
