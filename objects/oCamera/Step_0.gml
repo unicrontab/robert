@@ -1,9 +1,9 @@
 
-var yOffset = (camera_get_view_height(view_camera[0]) / -4);
+var yOffset = 50; //(-camera_get_view_height(view_camera[0]) / 2);
 
 if (follow != noone) {
 	xTo = follow.x;// + mouseAheadX;
-	yTo = follow.y + yOffset;// + mouseAheadY;
+	yTo = follow.y - 50;// + mouseAheadY;
 }
 
 // Update camera pos

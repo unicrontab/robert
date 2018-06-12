@@ -15,5 +15,10 @@ repeat(pointDelta) {
 }
 
 draw_set_halign(fa_right);
-draw_text_transformed(camera_get_view_width(view_current) - 40, 40, string(global.time/room_speed), 0.5, 0.5, image_angle);
+draw_text_transformed(camera_get_view_width(view_current) - 30, 40, string(global.time/room_speed), 1, 1, image_angle);
+
+var levelName = room_get_name(room);
+draw_set_halign(fa_left);
+draw_text_transformed(40, 75, levelName, 1, 1, image_angle);
+
 lastPoints = oPlayer.points;
